@@ -1,0 +1,180 @@
+.home_outer_div nav {
+  background-color: rgb(51, 53, 69);
+}
+.home_outer_div nav ul {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  list-style: none;
+  height: 3vw;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.home_outer_div nav li img {
+  width: 3vw;
+}
+.home_outer_div nav ul li {
+  display: flex;
+  /* align-items: center; */
+  font-family: "Caveat", cursive;
+}
+.home_outer_div nav ul li form input {
+  background-color: rgb(248, 68, 100);
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  border-radius: 2vw;
+  width: 10vw;
+  height: 2vw;
+}
+.home_outer_div nav ul li form input:focus {
+  outline: none;
+}
+::placeholder {
+  color: black;
+  text-align: center;
+}
+.container {
+  display: flex;
+  position: relative;
+  width: auto;
+  height: 30vw;
+  border: 1px solid black;
+  margin-top: 2.5vw;
+}
+
+.image {
+  display: flex;
+  width: auto;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0),
+    rgba(51, 53, 69, 1)
+  );
+  overflow: hidden;
+  width: auto;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+.container:hover .image {
+  filter: blur(2px);
+}
+.overlay #first {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.overlay div button {
+  background-color: rgb(248, 68, 100);
+  color: white;
+  width: 8vw;
+  height: 3vw;
+}
+.overlay #second {
+  color: yellow;
+}
+.Rating_div {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: yellow;
+  background-color: rgb(31, 37, 51);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.84vw;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+.form_rating_div {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+}
+.form_timing_div {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+}
+.full_form_div {
+  font-size: 1.25vw;
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.25);
+  opacity: 1;
+  width: 30vw;
+  height: auto;
+  border-radius: 2vw;
+  background-color: rgb(31, 37, 51);
+  color: white;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 20ms;
+}
+.full_form_div.active {
+  top: 80%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+.left_p {
+  color: yellow;
+  width: auto;
+  margin-left: 1vw;
+}
+.right_p {
+  color: yellow;
+  width: auto;
+  margin-right: 1vw;
+}
+.input_form_div {
+  margin-top: 4vw;
+  height: auto;
+}
+.input_form_div div {
+  display: flex;
+  margin-bottom: 3vw;
+  justify-content: space-between;
+}
+.input_form_div div label {
+  margin-left: 2vw;
+}
+.input_form_div div input {
+  margin-right: 2vw;
+}
+.input_form_div div button {
+  width: 25vw;
+  border-radius: 2vw;
+  background-color: rgb(248, 68, 100);
+  color: white;
+  border: none;
+  height: 3vw;
+  font-size: 1.25vw;
+}
+.close-btn {
+  text-align: right;
+  color: rgb(248, 68, 100);
+  font-size: 1.75vw;
+  margin-right: 1vw;
+  cursor: pointer;
+}
+.blur {
+  filter: blur(2px);
+}
