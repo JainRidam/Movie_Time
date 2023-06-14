@@ -143,6 +143,7 @@ function Home() {
                         ) : (
                           <>
                             <button
+                              style={{ cursor: "pointer" }}
                               className="show-login"
                               onClick={(event) =>
                                 showpopup(value.show.id, event)
@@ -151,11 +152,12 @@ function Home() {
                               Book Tickets
                             </button>
                             <button
+                              style={{ cursor: "pointer" }}
                               onClick={(event) =>
                                 knowMoreFunc(value.show, event)
                               }
                             >
-                              Know more..
+                              Details..
                             </button>
                           </>
                         )}
