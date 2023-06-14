@@ -112,14 +112,25 @@ function Home() {
                             ? value.show.image.original
                             : "https://c8.alamy.com/comp/RC04FA/old-fashioned-movie-film-camera-logo-design-template-black-and-white-vector-illustration-RC04FA.jpg"
                         }
-                        style={{ height: "100%", width: "auto" }}
+                        style={{ height: "30vw", width: "20vw" }}
                       ></img>
                       <div className="Rating_div">
-                        <p style={{ display: "flex", alignItems: "center" }}>
-                          <img src={rating} style={{ height: "2.2vw" }} />
+                        <p
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            margin: "0",
+                          }}
+                        >
+                          <img
+                            src={rating}
+                            style={{ width: "1vw", marginRight: ".25vw" }}
+                          />
                           Ratings: {value.show.rating.average}
                         </p>
-                        <p>Language: {value.show.language}</p>
+                        <p style={{ marginRight: "0.5vw" }}>
+                          Language: {value.show.language}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -128,9 +139,7 @@ function Home() {
                       <div id="first">
                         {value.show.status === "Ended" ||
                         value.show.status === "To Be Determined" ? (
-                          <>
-                            <button>Know more..</button>
-                          </>
+                          <></>
                         ) : (
                           <>
                             <button
@@ -158,8 +167,19 @@ function Home() {
                             justifyContent: "space-evenly",
                           }}
                         >
-                          <p>Timings: {value.show.schedule.time}</p>
-                          <p>Duration: {value.show.runtime}min</p>
+                          {value.show.status === "Ended" ||
+                          value.show.status === "To Be Determined" ? (
+                            <>
+                              <p>Timings: N/A</p>
+                              <p>Duration: N/A</p>
+                            </>
+                          ) : (
+                            <>
+                              {" "}
+                              <p>Timings: {value.show.schedule.time}</p>
+                              <p>Duration: {value.show.runtime}min</p>
+                            </>
+                          )}
                         </div>
                         <div
                           style={{
@@ -167,8 +187,19 @@ function Home() {
                             justifyContent: "space-evenly",
                           }}
                         >
-                          <p>Day: {value.show.schedule.days}</p>
-                          <p>Status: {value.show.status}</p>
+                          {value.show.status === "Ended" ||
+                          value.show.status === "To Be Determined" ? (
+                            <>
+                              <p>Day: N/A</p>
+                              <p>Status: {value.show.status}</p>
+                            </>
+                          ) : (
+                            <>
+                              {" "}
+                              <p>Day: {value.show.schedule.days}</p>
+                              <p>Status: {value.show.status}</p>
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -222,7 +253,7 @@ function Home() {
                       <div>
                         {" "}
                         <label>No of seats</label>
-                        <input list="data" style={{ width: "2vw" }} />
+                        <input list="data" style={{ width: "3vw" }} />
                         <datalist id="data">
                           {seats.map((n) => {
                             return <option value={n} />;

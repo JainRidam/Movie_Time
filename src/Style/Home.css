@@ -6,7 +6,7 @@
   color: white;
   display: flex;
   list-style: none;
-  height: 3vw;
+  height: 4vw;
   align-items: center;
   justify-content: space-between;
   margin-left: 1vw;
@@ -85,6 +85,7 @@
   color: white;
   width: 8vw;
   height: 3vw;
+  border-radius: 2vw;
 }
 .overlay #second {
   color: yellow;
@@ -103,6 +104,7 @@
   opacity: 0.8;
 }
 .form_rating_div {
+  margin-top: 1.5vw;
   display: flex;
   width: auto;
   justify-content: space-between;
@@ -113,6 +115,7 @@
   justify-content: space-between;
 }
 .full_form_div {
+  z-index: 6;
   font-size: 1.25vw;
   position: absolute;
   top: -150%;
@@ -128,7 +131,7 @@
     transform 200ms ease-in-out 20ms;
 }
 .full_form_div.active {
-  top: 80%;
+  top: 100%;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
@@ -158,6 +161,10 @@
 }
 .input_form_div div input {
   margin-right: 2vw;
+  border-radius: 0.5vw;
+  height: 1.25vw;
+  outline: none;
+  text-align: center;
 }
 .input_form_div div button {
   width: 25vw;
@@ -167,8 +174,11 @@
   border: none;
   height: 3vw;
   font-size: 1.25vw;
+  cursor: pointer;
 }
 .close-btn {
+  position: absolute;
+  right: 0;
   text-align: right;
   color: rgb(248, 68, 100);
   font-size: 1.75vw;
@@ -177,4 +187,10 @@
 }
 .blur {
   filter: blur(2px);
+}
+#main_div {
+  font-family: "Roboto", sans-serif;
+}
+#popup {
+  font-family: "Roboto", sans-serif;
 }
